@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 
 		float translationY = 0;
 		float translationX = Input.GetAxis ("Horizontal") * Velocidade; //Controle de Movimento
-		transform.Translate (translationX, translationY, 0);
+		transform.Translate(new Vector3(translationX,0,0), Space.World);
 		transform.Rotate (0, 0, 0);
 		if (translationX != 0) {
 			anim.SetTrigger ("corre");
